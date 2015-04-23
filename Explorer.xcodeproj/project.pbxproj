@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0C28196B1AE8E3620071CA28 /* PicturesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C28196A1AE8E3620071CA28 /* PicturesViewController.m */; };
+		0C42A4BD1AE8EE93001F5D2F /* Picture.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C42A4BC1AE8EE93001F5D2F /* Picture.m */; };
+		0C42A4C01AE8F2BB001F5D2F /* FlickRClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C42A4BF1AE8F2BB001F5D2F /* FlickRClient.m */; };
 		0C5A15831AE8D3E000967A0B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C5A15821AE8D3E000967A0B /* main.m */; };
 		0C5A15861AE8D3E000967A0B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C5A15851AE8D3E000967A0B /* AppDelegate.m */; };
 		0C5A15891AE8D3E000967A0B /* Explorer.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0C5A15871AE8D3E000967A0B /* Explorer.xcdatamodeld */; };
@@ -15,6 +18,7 @@
 		0C5A15911AE8D3E000967A0B /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0C5A15901AE8D3E000967A0B /* Images.xcassets */; };
 		0C5A15941AE8D3E000967A0B /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0C5A15921AE8D3E000967A0B /* LaunchScreen.xib */; };
 		0C5A15A01AE8D3E000967A0B /* ExplorerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C5A159F1AE8D3E000967A0B /* ExplorerTests.m */; };
+		0C5A15AB1AE8DFC300967A0B /* FBCaroussel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C5A15AA1AE8DFC300967A0B /* FBCaroussel.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -28,6 +32,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0C2819691AE8E3620071CA28 /* PicturesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PicturesViewController.h; sourceTree = "<group>"; };
+		0C28196A1AE8E3620071CA28 /* PicturesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PicturesViewController.m; sourceTree = "<group>"; };
+		0C42A4BB1AE8EE93001F5D2F /* Picture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Picture.h; sourceTree = "<group>"; };
+		0C42A4BC1AE8EE93001F5D2F /* Picture.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Picture.m; sourceTree = "<group>"; };
+		0C42A4BE1AE8F2BB001F5D2F /* FlickRClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FlickRClient.h; sourceTree = "<group>"; };
+		0C42A4BF1AE8F2BB001F5D2F /* FlickRClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FlickRClient.m; sourceTree = "<group>"; };
 		0C5A157D1AE8D3E000967A0B /* Explorer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Explorer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0C5A15811AE8D3E000967A0B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0C5A15821AE8D3E000967A0B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -42,6 +52,8 @@
 		0C5A15991AE8D3E000967A0B /* ExplorerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ExplorerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0C5A159E1AE8D3E000967A0B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0C5A159F1AE8D3E000967A0B /* ExplorerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ExplorerTests.m; sourceTree = "<group>"; };
+		0C5A15A91AE8DFC300967A0B /* FBCaroussel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FBCaroussel.h; sourceTree = "<group>"; };
+		0C5A15AA1AE8DFC300967A0B /* FBCaroussel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FBCaroussel.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,10 +100,18 @@
 				0C5A158A1AE8D3E000967A0B /* ViewController.h */,
 				0C5A158B1AE8D3E000967A0B /* ViewController.m */,
 				0C5A158D1AE8D3E000967A0B /* Main.storyboard */,
+				0C5A15A91AE8DFC300967A0B /* FBCaroussel.h */,
+				0C5A15AA1AE8DFC300967A0B /* FBCaroussel.m */,
 				0C5A15901AE8D3E000967A0B /* Images.xcassets */,
 				0C5A15921AE8D3E000967A0B /* LaunchScreen.xib */,
 				0C5A15871AE8D3E000967A0B /* Explorer.xcdatamodeld */,
 				0C5A15801AE8D3E000967A0B /* Supporting Files */,
+				0C2819691AE8E3620071CA28 /* PicturesViewController.h */,
+				0C28196A1AE8E3620071CA28 /* PicturesViewController.m */,
+				0C42A4BB1AE8EE93001F5D2F /* Picture.h */,
+				0C42A4BC1AE8EE93001F5D2F /* Picture.m */,
+				0C42A4BE1AE8F2BB001F5D2F /* FlickRClient.h */,
+				0C42A4BF1AE8F2BB001F5D2F /* FlickRClient.m */,
 			);
 			path = Explorer;
 			sourceTree = "<group>";
@@ -223,9 +243,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				0C5A15891AE8D3E000967A0B /* Explorer.xcdatamodeld in Sources */,
+				0C42A4BD1AE8EE93001F5D2F /* Picture.m in Sources */,
 				0C5A15861AE8D3E000967A0B /* AppDelegate.m in Sources */,
+				0C42A4C01AE8F2BB001F5D2F /* FlickRClient.m in Sources */,
 				0C5A158C1AE8D3E000967A0B /* ViewController.m in Sources */,
+				0C28196B1AE8E3620071CA28 /* PicturesViewController.m in Sources */,
 				0C5A15831AE8D3E000967A0B /* main.m in Sources */,
+				0C5A15AB1AE8DFC300967A0B /* FBCaroussel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -352,8 +376,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Explorer/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -362,8 +388,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Explorer/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -420,6 +448,7 @@
 				0C5A15A51AE8D3E000967A0B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		0C5A15A61AE8D3E000967A0B /* Build configuration list for PBXNativeTarget "ExplorerTests" */ = {
 			isa = XCConfigurationList;
@@ -428,6 +457,7 @@
 				0C5A15A81AE8D3E000967A0B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
