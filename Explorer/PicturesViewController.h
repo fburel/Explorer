@@ -10,4 +10,7 @@
 
 @interface PicturesViewController : UIViewController
 
+// Definir les coord de la ville a afficher
+- (void) setLongitude:(double)lon latitude:(double)lat;
+
 @end

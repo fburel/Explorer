@@ -14,7 +14,7 @@
 @interface PicturesViewController ()
 <FBCarousselDelegate>
 
-@property (weak, nonatomic) IBOutlet FBCaroussel *caroussel;
+@property (weak, nonatomic) IBOutlet FBCaroussel *carroussel;
 
 
 /// Contient la liste des Pictures récupérées de FlickR
@@ -23,9 +23,25 @@
 /// Stocke les NSData des objets Pictures téléchargés
 @property (strong, nonatomic) NSMutableDictionary * cacheImages;
 
+@property (/*readwrite, assign, */nonatomic) FlickRClientLocation location;
+
 @end
 
 @implementation PicturesViewController
+
+
+
+-(void)setLongitude:(double)lon latitude:(double)lat
+{
+    
+    FlickRClientLocation location;
+    location.latitude = lat; // 47.498333;
+    location.longitude = lon ; // 19.040833;
+    
+    self.location = location;
+
+}
+
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -33,22 +49,19 @@
     
     FlickRClient * client = [FlickRClient new];
     
-    FlickRClientLocation budapest;
-    budapest.latitude = 47.498333;
-    budapest.longitude = 19.040833;
+   
+//    self.pictures = [client picturesFromLocation:self.location];
     
-//    self.pictures = [client picturesFromLocation:budapest];
-    
-    [client fetchPicturesFromLocation:budapest
+    [client fetchPicturesFromLocation:self.location
                            completion:^(NSArray *pictures) {
                                
                                self.pictures = pictures;
                                
-                               [self.caroussel displayFirstPage];
+                               [self.carroussel displayFirstPage];
                                
                            }];
     
-    self.caroussel.delegate = self;
+    self.carroussel.delegate = self;
     
     
 }
@@ -56,7 +69,7 @@
 
 - (IBAction)share:(id)sender
 {
-    Picture * picture = self.pictures[self.caroussel.currentPageIndex];
+    Picture * picture = self.pictures[self.carroussel.currentPageIndex];
     
     // Creer une array avec TOUT ce que vous souhaitez partager
     NSArray * shareItem = @[picture.title,

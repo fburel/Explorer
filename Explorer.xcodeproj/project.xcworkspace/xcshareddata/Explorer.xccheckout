@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>BC7CA95D-14D5-413F-A597-32CDA73A06DE</string>
+	<key>IDESourceControlProjectName</key>
+	<string>Explorer</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>F454B3D42FE61C49036516711D6D2E979D613235</key>
+		<string>https://github.com/fburel/Explorer.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>Explorer.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>F454B3D42FE61C49036516711D6D2E979D613235</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/fburel/Explorer.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>F454B3D42FE61C49036516711D6D2E979D613235</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>F454B3D42FE61C49036516711D6D2E979D613235</string>
+			<key>IDESourceControlWCCName</key>
+			<string>Explorer</string>
+		</dict>
+	</array>
+</dict>
+</plist>

@@ -19,6 +19,8 @@
 		0C5A15941AE8D3E000967A0B /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0C5A15921AE8D3E000967A0B /* LaunchScreen.xib */; };
 		0C5A15A01AE8D3E000967A0B /* ExplorerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C5A159F1AE8D3E000967A0B /* ExplorerTests.m */; };
 		0C5A15AB1AE8DFC300967A0B /* FBCaroussel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C5A15AA1AE8DFC300967A0B /* FBCaroussel.m */; };
+		0C71A4721AEA42F900EE5A3B /* City.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C71A4711AEA42F900EE5A3B /* City.m */; };
+		0C71A47A1AEA45C500EE5A3B /* CitiesRepository.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C71A4791AEA45C500EE5A3B /* CitiesRepository.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +56,10 @@
 		0C5A159F1AE8D3E000967A0B /* ExplorerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ExplorerTests.m; sourceTree = "<group>"; };
 		0C5A15A91AE8DFC300967A0B /* FBCaroussel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FBCaroussel.h; sourceTree = "<group>"; };
 		0C5A15AA1AE8DFC300967A0B /* FBCaroussel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FBCaroussel.m; sourceTree = "<group>"; };
+		0C71A4701AEA42F900EE5A3B /* City.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = City.h; sourceTree = "<group>"; };
+		0C71A4711AEA42F900EE5A3B /* City.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = City.m; sourceTree = "<group>"; };
+		0C71A4781AEA45C500EE5A3B /* CitiesRepository.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CitiesRepository.h; sourceTree = "<group>"; };
+		0C71A4791AEA45C500EE5A3B /* CitiesRepository.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CitiesRepository.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,23 +101,11 @@
 		0C5A157F1AE8D3E000967A0B /* Explorer */ = {
 			isa = PBXGroup;
 			children = (
-				0C5A15841AE8D3E000967A0B /* AppDelegate.h */,
-				0C5A15851AE8D3E000967A0B /* AppDelegate.m */,
-				0C5A158A1AE8D3E000967A0B /* ViewController.h */,
-				0C5A158B1AE8D3E000967A0B /* ViewController.m */,
-				0C5A158D1AE8D3E000967A0B /* Main.storyboard */,
-				0C5A15A91AE8DFC300967A0B /* FBCaroussel.h */,
-				0C5A15AA1AE8DFC300967A0B /* FBCaroussel.m */,
+				0C71A4771AEA44C900EE5A3B /* Model */,
+				0C71A4751AEA440A00EE5A3B /* ViewControllers */,
+				0C71A4761AEA441A00EE5A3B /* Views */,
 				0C5A15901AE8D3E000967A0B /* Images.xcassets */,
-				0C5A15921AE8D3E000967A0B /* LaunchScreen.xib */,
-				0C5A15871AE8D3E000967A0B /* Explorer.xcdatamodeld */,
 				0C5A15801AE8D3E000967A0B /* Supporting Files */,
-				0C2819691AE8E3620071CA28 /* PicturesViewController.h */,
-				0C28196A1AE8E3620071CA28 /* PicturesViewController.m */,
-				0C42A4BB1AE8EE93001F5D2F /* Picture.h */,
-				0C42A4BC1AE8EE93001F5D2F /* Picture.m */,
-				0C42A4BE1AE8F2BB001F5D2F /* FlickRClient.h */,
-				0C42A4BF1AE8F2BB001F5D2F /* FlickRClient.m */,
 			);
 			path = Explorer;
 			sourceTree = "<group>";
@@ -119,6 +113,11 @@
 		0C5A15801AE8D3E000967A0B /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				0C5A15841AE8D3E000967A0B /* AppDelegate.h */,
+				0C5A15851AE8D3E000967A0B /* AppDelegate.m */,
+				0C5A158D1AE8D3E000967A0B /* Main.storyboard */,
+				0C5A15921AE8D3E000967A0B /* LaunchScreen.xib */,
+				0C5A15871AE8D3E000967A0B /* Explorer.xcdatamodeld */,
 				0C5A15811AE8D3E000967A0B /* Info.plist */,
 				0C5A15821AE8D3E000967A0B /* main.m */,
 			);
@@ -140,6 +139,57 @@
 				0C5A159E1AE8D3E000967A0B /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		0C71A4731AEA43D400EE5A3B /* ModelObjects */ = {
+			isa = PBXGroup;
+			children = (
+				0C71A4701AEA42F900EE5A3B /* City.h */,
+				0C71A4711AEA42F900EE5A3B /* City.m */,
+				0C42A4BB1AE8EE93001F5D2F /* Picture.h */,
+				0C42A4BC1AE8EE93001F5D2F /* Picture.m */,
+			);
+			name = ModelObjects;
+			sourceTree = "<group>";
+		};
+		0C71A4741AEA43ED00EE5A3B /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				0C42A4BE1AE8F2BB001F5D2F /* FlickRClient.h */,
+				0C42A4BF1AE8F2BB001F5D2F /* FlickRClient.m */,
+				0C71A4781AEA45C500EE5A3B /* CitiesRepository.h */,
+				0C71A4791AEA45C500EE5A3B /* CitiesRepository.m */,
+			);
+			name = Service;
+			sourceTree = "<group>";
+		};
+		0C71A4751AEA440A00EE5A3B /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				0C5A158A1AE8D3E000967A0B /* ViewController.h */,
+				0C5A158B1AE8D3E000967A0B /* ViewController.m */,
+				0C2819691AE8E3620071CA28 /* PicturesViewController.h */,
+				0C28196A1AE8E3620071CA28 /* PicturesViewController.m */,
+			);
+			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		0C71A4761AEA441A00EE5A3B /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				0C5A15A91AE8DFC300967A0B /* FBCaroussel.h */,
+				0C5A15AA1AE8DFC300967A0B /* FBCaroussel.m */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		0C71A4771AEA44C900EE5A3B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				0C71A4731AEA43D400EE5A3B /* ModelObjects */,
+				0C71A4741AEA43ED00EE5A3B /* Service */,
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -250,6 +300,8 @@
 				0C28196B1AE8E3620071CA28 /* PicturesViewController.m in Sources */,
 				0C5A15831AE8D3E000967A0B /* main.m in Sources */,
 				0C5A15AB1AE8DFC300967A0B /* FBCaroussel.m in Sources */,
+				0C71A47A1AEA45C500EE5A3B /* CitiesRepository.m in Sources */,
+				0C71A4721AEA42F900EE5A3B /* City.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
