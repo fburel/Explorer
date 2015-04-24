@@ -9,6 +9,7 @@
 #import "ViewController.h"
 #import "CitiesRepository.h"
 #import "City.h"
+#import "PicturesViewController.h"
 
 @interface ViewController ()
 <UITableViewDataSource>
@@ -36,10 +37,28 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     self.repository = [CitiesRepository new];
-        
+    
     self.cities = [self.repository allCities];
     
     self.tableView.dataSource = self;
+}
+
+#pragma mark - Navigation
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if([segue.identifier isEqualToString:@"CITY_SELECTED"])
+    {
+        NSIndexPath * indexPath = [self.tableView indexPathForCell:sender];
+        
+        City * city = self.cities[indexPath.row];
+        
+        PicturesViewController * pvc = segue.destinationViewController;
+        
+        [pvc setLongitude:city.longitude.doubleValue
+                 latitude:city.latitude.doubleValue];
+        
+    }
 }
 
 #pragma mark - UITableViewDataSource
@@ -67,6 +86,17 @@
     
 }
 
+- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    if(editingStyle == UITableViewCellEditingStyleDelete)
+    {
+        City * city = self.cities[indexPath.row];
+        [self.repository deleteCity:city];
+        self.cities = [self.repository allCities];
+        [self.tableView deleteRowsAtIndexPaths:@[indexPath]
+                              withRowAnimation:UITableViewRowAnimationAutomatic];
+    }
+}
 @end
 
 
