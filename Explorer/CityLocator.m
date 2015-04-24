@@ -26,7 +26,9 @@
 {
     if(!_manager)
     {
+        
         _manager = [CLLocationManager new];
+        [_manager requestWhenInUseAuthorization];
         _manager.desiredAccuracy = kCLLocationAccuracyKilometer;
         _manager.delegate = self;
     }
