@@ -8,10 +8,28 @@
 
 #import "CitiesRepository.h"
 #import "AppDelegate.h"
+#import "CityLocator.h"
 
 #define ENTITY_NAME     @"City"
 
+
+@interface CitiesRepository ()
+
+@property (strong, nonatomic) CityLocator * locator;
+
+@end
+
+
 @implementation CitiesRepository
+
+- (CityLocator *)locator
+{
+    if(!_locator)
+    {
+        _locator = [CityLocator new];
+    }
+    return _locator;
+}
 
 - (NSManagedObjectContext *) managedObjectContext
 {
@@ -40,16 +58,18 @@
     City * city = [NSEntityDescription insertNewObjectForEntityForName:ENTITY_NAME
                                                 inManagedObjectContext:context];
     
-    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(4 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-        
-        //TODO : Remplacer par la geoloc
-        city.name = @"Budapest";
-        city.latitude = @47.498333; 
-        city.longitude = @19.040833;
-        
-        [[self managedObjectContext] save:nil];
-        
-    });
+    [self.locator LocalizeCity:city];
+    
+//    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(4 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+//        
+//        //TODO : Remplacer par la geoloc
+//        city.name = @"Budapest";
+//        city.latitude = @47.498333; 
+//        city.longitude = @19.040833;
+//        
+//        [[self managedObjectContext] save:nil];
+//        
+//    });
     
     
     
