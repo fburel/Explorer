@@ -21,6 +21,7 @@
 		0C5A15AB1AE8DFC300967A0B /* FBCaroussel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C5A15AA1AE8DFC300967A0B /* FBCaroussel.m */; };
 		0C71A4721AEA42F900EE5A3B /* City.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C71A4711AEA42F900EE5A3B /* City.m */; };
 		0C71A47A1AEA45C500EE5A3B /* CitiesRepository.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C71A4791AEA45C500EE5A3B /* CitiesRepository.m */; };
+		0C71A47D1AEA7FC200EE5A3B /* LoadingTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C71A47C1AEA7FC200EE5A3B /* LoadingTableViewCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +61,8 @@
 		0C71A4711AEA42F900EE5A3B /* City.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = City.m; sourceTree = "<group>"; };
 		0C71A4781AEA45C500EE5A3B /* CitiesRepository.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CitiesRepository.h; sourceTree = "<group>"; };
 		0C71A4791AEA45C500EE5A3B /* CitiesRepository.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CitiesRepository.m; sourceTree = "<group>"; };
+		0C71A47B1AEA7FC200EE5A3B /* LoadingTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoadingTableViewCell.h; sourceTree = "<group>"; };
+		0C71A47C1AEA7FC200EE5A3B /* LoadingTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoadingTableViewCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -177,6 +180,8 @@
 		0C71A4761AEA441A00EE5A3B /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				0C71A47B1AEA7FC200EE5A3B /* LoadingTableViewCell.h */,
+				0C71A47C1AEA7FC200EE5A3B /* LoadingTableViewCell.m */,
 				0C5A15A91AE8DFC300967A0B /* FBCaroussel.h */,
 				0C5A15AA1AE8DFC300967A0B /* FBCaroussel.m */,
 			);
@@ -293,6 +298,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0C5A15891AE8D3E000967A0B /* Explorer.xcdatamodeld in Sources */,
+				0C71A47D1AEA7FC200EE5A3B /* LoadingTableViewCell.m in Sources */,
 				0C42A4BD1AE8EE93001F5D2F /* Picture.m in Sources */,
 				0C5A15861AE8D3E000967A0B /* AppDelegate.m in Sources */,
 				0C42A4C01AE8F2BB001F5D2F /* FlickRClient.m in Sources */,

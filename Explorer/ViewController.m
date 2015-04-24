@@ -10,6 +10,7 @@
 #import "CitiesRepository.h"
 #import "City.h"
 #import "PicturesViewController.h"
+#import "LoadingTableViewCell.h"
 
 @interface ViewController ()
 <UITableViewDataSource>
@@ -26,11 +27,17 @@
 
 - (IBAction)addCity:(id)sender {
     
-    [self.repository addCurrentCity];
+    City * city = [self.repository addCurrentCity];
     
     self.cities = [self.repository allCities];
     
     [self.tableView reloadData];
+    
+    [city addObserver:self
+           forKeyPath:@"name"
+              options:0
+              context:NULL];
+    
 }
 
 - (void)viewDidLoad {
@@ -77,12 +84,25 @@
 {
     City * city = self.cities[indexPath.row];
     
-    UITableViewCell * cell;
-    cell = [tableView dequeueReusableCellWithIdentifier:@"CITY_CELL"
-                                           forIndexPath:indexPath];
-    cell.textLabel.text = city.name;
+    if(city.name == nil)
+    {
+        LoadingTableViewCell * cell;
+        cell = [tableView dequeueReusableCellWithIdentifier:@"LOADING_CELL"
+                                forIndexPath:indexPath];
+        cell.messageLabel.text = NSLocalizedString(@"Wait Please...", nil);
+        [cell.spinner startAnimating];
+        return cell;
+    }
+    else
+    {
+        UITableViewCell * cell;
+        cell = [tableView dequeueReusableCellWithIdentifier:@"CITY_CELL"
+                                forIndexPath:indexPath];
+        cell.textLabel.text = city.name;
+        
+        return cell;
+    }
     
-    return cell;
     
 }
 
@@ -97,6 +117,23 @@
                               withRowAnimation:UITableViewRowAnimationAutomatic];
     }
 }
+
+#pragma mark - KVO
+
+- (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context
+{
+    if([object isKindOfClass:[City class]])
+    {
+//        City * city = (City *)object;
+        
+        [self.tableView reloadData];
+        
+    }
+    
+    [object removeObserver:self forKeyPath:keyPath];
+    
+}
+
 @end
 
 

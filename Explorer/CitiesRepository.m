@@ -40,14 +40,18 @@
     City * city = [NSEntityDescription insertNewObjectForEntityForName:ENTITY_NAME
                                                 inManagedObjectContext:context];
     
-    //TODO : Remplacer par la geoloc
-    city.name = @"Budapest";
-    city.latitude = @47.498333; // [NSNumber numberWithDouble:...];
-    city.longitude = @19.040833;
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(4 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        
+        //TODO : Remplacer par la geoloc
+        city.name = @"Budapest";
+        city.latitude = @47.498333; 
+        city.longitude = @19.040833;
+        
+        [[self managedObjectContext] save:nil];
+        
+    });
     
-    NSError * error = nil;
     
-    [[self managedObjectContext] save:&error];
     
     
     return city;
